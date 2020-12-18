@@ -1,4 +1,5 @@
 let lockURL = "WB3-GOT.wav"
+let drumURL = "camel(snare).mp3"
 
 
 function unlockandplay(step){
@@ -8,6 +9,10 @@ function unlockandplay(step){
         document.getElementById("lockedIcon").innerHTML=`
         <i class="fas fa-unlock-alt"></i>
         `
+    }
+    if (step=2){
+        let url = drumURL
+        playAudio(url)
     }
 }
 
