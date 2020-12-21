@@ -41,7 +41,7 @@ const day8 = {
     },
     empty:{
         iconName:"fas fa-yin-yang",
-        iconName2:"",
+        iconName2:"fa-file-powerpoint",
         text:"empty"
     }
 }
