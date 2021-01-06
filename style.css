@@ -4,6 +4,9 @@
     margin: 20px;
     flex: auto;
 }
+.iconbox{
+    align-items: center;
+}
 /* grid or flexbox? */
 /* gotta know: when switch flex to column  */
 .box{
@@ -11,6 +14,7 @@
     justify-content: center;
     /* virticle */
     align-items: flex-start;
+    align-content: center;
     flex-direction: column;
 }
 /* justify */
@@ -18,4 +22,9 @@
     font-size: xx-large;
     margin: 10%;
     flex: auto;
+}
+
+.indexdiv{
+    cursor: all-scroll;
+    text-align: center;
 }

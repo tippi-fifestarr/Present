@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+}
+
+.poop-text {
+    margin-top: .3em;
+    color: blanchedalmond;
+}
+
+.a2nd {
+    margin-top: .5em;
+}
+
+.icon{
+    height: 100%;
+    font-size: 8em;
+    margin: 20px;
+    flex: auto;
+}
+.iconbox{
+    align-items: center;
+}
+/* grid or flexbox? */
+/* gotta know: when switch flex to column  */
+.box{
+    /* horizontal */
+    justify-content: center;
+    /* virticle */
+    align-items: flex-start;
+    align-content: center;
+    flex-direction: column;
+}
+/* justify */
+.icon2{
+    font-size: xx-large;
+    margin: 10%;
+    flex: auto;
+}
+
+.button {
+    z-index: 10;
+}
+
+.indexdiv{
+    cursor: all-scroll;
+    text-align: center;
+}
