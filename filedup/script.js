@@ -37,3 +37,40 @@ function clickHandleDownload(){
         count++
     }
 }
+
+function clickHandleSimple(){
+    
+    
+    
+    icon.innerHTML = `
+    <!-- The "multiple" attribute lets users select multiple files. -->
+    <input type="file" id="file-selector" multiple>
+    `
+
+    const fileSelector = document.getElementById('file-selector');
+    fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    console.log(fileList);
+     });
+   
+}
+
+
+// JavaScript Document
+//Set up simple machine
+
+  
+
+
+// var destDoc, sourceDoc, sourceFolder, newLayer;
+
+// // Select the source folder.
+// sourceFolder = Folder.selectDialog('Select the folder with images', '~');
+// destDoc = app.documents.add();
+
+// // If a valid folder is selected
+// if (sourceFolder != null) {
+//     files = new Array();
+
+//     // Get all files matching the pattern
+//     files = sourceFolder.getFiles();
