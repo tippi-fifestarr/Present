@@ -1,0 +1,12 @@
+filedup simple download page powered by mongodo
+upload page (choose images)
+image compression (or size standard limits)
+gallery display
+on click choose and allow edit (add name)
+
+timer
+timer
+
+input box (done button)
+submits with a time stamp (or, as long as submitted before the next question )
+

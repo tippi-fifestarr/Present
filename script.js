@@ -7,14 +7,16 @@ const index = {
     welcome:{
         iconName:"fas fa-door-open",
         iconName2:"far fa-snowflake",
-        text:"welcome to WC&MP online 'OF' course: the album. click the below button to nav",
+        iconName3:"fas fa-mountain",
+        text:"welcome to WC&MP online 'OF' course: the album. step back or step forward. first question: 'how twisted can this snowflake?'",
         linktext:"http://www.boober.org"
     },
     days1:{
         iconName:"fas fa-road fa-spin",
         iconName2:"fas fa-map-marked-alt",
-        text:"as of ${currentDay}, there has been no roadmap to making a song.  there are steps, beginnings, middles, ends, arguments, wingbirds, questions, answers, awards, files, artistnames, tracktittles, tyops, and forgotten junk between the keys or gems.  and if you are lucky enough to find someone else who cares enough to listen with care to your music, you will be the roadmap. below the below button are links; they are the maps, or at least, they are the iconic links to days past.",
-        linktext:["./day1.html","./day2.html","./day3.html","./day4.html","./day5.html","./day6.html","./day7.html", "./day8.html", "./day9.html", "./day10.html", "./tippibio.html", "./vocab.html"]
+        iconName3:"fas fa-key",
+        text:"as of ${currentDay}, there has been no roadmap to making a song.  there are steps, beginnings, middles, ends, arguments, wingbirds, questions, answers, awards, files, artistnames, tracktittles, tyops, and forgotten junk between the keys or <a target='_blank' href='./gems.txt'> gems</a>.  and if you are lucky enough to find someone else who cares enough to listen with care to your music, you will be the roadmap. below the below button are links; they are the maps, or at least, they are the iconic links to days past.",
+        linktextArray:["./day1.html","./day2.html","./day3.html","./day4.html","./day5.html","./day6.html","./day7.html", "./day8.html", "./day9.html", "./day10.html", "./tippibio.html", "./vocab.html"]
     },
     wingbird:{
         iconName:"fas fa-kiwi-bird",
@@ -211,6 +213,7 @@ const day7 = {
 // dan does a sweet hotkey to double what he just wrote (the dupe)
 const icon = document.getElementById('icon')
 const text = document.getElementById('text')
+const linklist = document.getElementById('linklist')
 
 let count = 0
 
@@ -280,15 +283,29 @@ function clickHandle9(){
 
 function clickHandleIndex(){
     const keysArr = Object.keys(index)
-    // https://dmitripavlutin.com/is-array-javascript/
-    if (Array.isArray(keysArr.linktext)){
-        for (length of keysArr.linktext)
-        {
-            
+    icon.innerHTML = `<i class="${index[keysArr[count]].iconName3}"></i>
+    <i class="${index[keysArr[count]].iconName2}"></i>
+    <i class="${index[keysArr[count]].iconName1}"></i>
+    `
+    text.innerHTML = index[keysArr[count]].text + "<hr> <h2 class='spin'>❄️</h2> <hr> <a href='" + index[keysArr[count]].linktext + "' target='blank'> " + index[keysArr[count]].linktext + "</a>"
+    if (index[keysArr[count]].linktextArray){
+        console.log(index[keysArr[count]].linktextArray+ "link array")
+        text.innerHTML = index[keysArr[count]].text + "<hr> <h2 class='spin'>❄️</h2> <hr>"
+        linklist.innerHTML += "<br> more links: "
+        for (link of index[keysArr[count]].linktextArray){
+            linklist.innerHTML += "<a href='" + link + "'>"+link+"</a> / "  
         }
     }
-    // for (length of 
-    loopObject()
+    if(count == keysArr.length - 1){
+        count=0
+    } else {
+        count++
+    }
+    
+
+    // https://dmitripavlutin.com/is-array-javascript/
+
+    
 }
 
 function unlockandplay(step){
