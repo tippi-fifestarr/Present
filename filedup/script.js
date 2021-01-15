@@ -26,8 +26,8 @@ const downloadBai = {
     kaizen0: {
         iconInfo:`
         <span class="fa-stack fa-3x">
-                <i class="fas fa-poop fa-stack-2x"></i>
-                <strong class="fa-stack-1x poop-text"><i class="fas fa-download"></i></strong>
+                <i onclick="playAudio('./ipsum-navajobeat(0).wav')" class="mash fas fa-poop fa-stack-2x"></i>
+                <strong class="fa-stack-1x poop-text"><i class="mash fas fa-download"></i></strong>
             </span>
         `,
         trackTitle:`ipsum-navajobeat(0).wav`,
@@ -57,6 +57,11 @@ const icon = document.getElementById('icon')
 const text = document.getElementById('text')
 
 let count = 0
+
+function playAudio(url){
+    new Audio(url).play();
+}
+
 
 function clickHandleDownload(){
     const keysArr = Object.keys(download)

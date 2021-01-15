@@ -66,3 +66,8 @@ i:hover{
     transform:rotate(-45deg);
     transition: all 1s ease;
 }
+
+.mash:hover{
+    transform:rotate(-180deg);
+    transition: all 3.2s ease;
+}
